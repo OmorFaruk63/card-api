@@ -1,0 +1,100 @@
+* {
+    font-family: sans-serif;
+}
+
+#parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+#parent>div {
+    background-color: rgba(98, 255, 216, 0.378);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: 20px;
+    margin: 50px;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#parent div:hover {
+    transform: scale(1.04);
+}
+
+#parent div img {
+    margin: 5px;
+    width: 60%;
+    border-radius: 50%;
+}
+
+#parent button {
+    width: 60%;
+    padding: 10px;
+    background-color: rgba(8, 181, 255, 0.842);
+    border: 1px solid rgb(8, 181, 255);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#showpopup {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgb(0, 171, 163);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    position: fixed;
+    border-radius: 7px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#showpopup div {
+    width: 40%;
+    display: inline;
+}
+
+#showpopup img {
+    border-radius: 50%;
+    width: 150px;
+    margin: auto;
+}
+
+#showpopup button {
+    border-radius: 50%;
+    font-size: 40px;
+    padding: 10px;
+    background-color: rgba(255, 222, 173, 0);
+    border: none;
+}
+
+#showpopup button:hover {
+    transform: scale(1.1);
+    box-shadow: rgb(255, 0, 0) 0px 48px 100px 0px;
+}
+
+
+
+@media(max-width:991px) {
+    #parent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+
+    }
+}
+
+@media(max-width:576px) {
+    #parent {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}
